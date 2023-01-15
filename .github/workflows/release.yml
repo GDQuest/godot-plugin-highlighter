@@ -1,0 +1,22 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Zip
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -r godot-editor-highlighter.zip addons icon.svg
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: godot-editor-highlighter.zip
