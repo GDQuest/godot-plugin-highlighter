@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://diglikfvppb1h"]
+
+[ext_resource type="StyleBox" uid="uid://dff0w5lv3bdaa" path="res://addons/highlighter/highlight_style.tres" id="1_jx0i5"]
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 96.0
+offset_right = 432.0
+offset_bottom = 179.0
+text = "This scene is only there to preview the highlight, it has no other function and can be safely dismissed."
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 59.0
+offset_right = 743.0
+offset_bottom = 351.0
+theme_override_styles/panel = ExtResource("1_jx0i5")
